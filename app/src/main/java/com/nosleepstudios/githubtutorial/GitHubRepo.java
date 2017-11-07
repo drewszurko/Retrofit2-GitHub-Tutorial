@@ -1,7 +1,6 @@
 package com.nosleepstudios.githubtutorial;
 
 public class GitHubRepo {
-
     private String name;
     private String description;
 
@@ -12,5 +11,4 @@ public class GitHubRepo {
     public String getDescription() {
         return description;
     }
-
 }
