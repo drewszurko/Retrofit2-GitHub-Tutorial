@@ -10,15 +10,13 @@ import java.util.List;
 
 
 public class GitHubRepoAdapter extends RecyclerView.Adapter<GitHubRepoAdapter.ViewHolder> {
-
     private List<GitHubRepo> mRepoList;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-
-        public TextView textRepoName, textRepoDesc;
+        TextView textRepoName, textRepoDesc;
         public View layout;
-        public ViewHolder(View v) {
 
+        ViewHolder(View v) {
             super(v);
             layout = v;
             textRepoName = v.findViewById(R.id.text_repo_name);
@@ -32,7 +30,6 @@ public class GitHubRepoAdapter extends RecyclerView.Adapter<GitHubRepoAdapter.Vi
 
     @Override
     public GitHubRepoAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.row_layout, parent, false);
         return new ViewHolder(v);
@@ -40,14 +37,12 @@ public class GitHubRepoAdapter extends RecyclerView.Adapter<GitHubRepoAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-
         holder.textRepoName.setText(mRepoList.get(position).getName());
         holder.textRepoDesc.setText(mRepoList.get(position).getDescription());
     }
 
     @Override
     public int getItemCount() {
-
         return mRepoList.size();
     }
 }
